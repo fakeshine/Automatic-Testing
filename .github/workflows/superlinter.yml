@@ -19,7 +19,7 @@ jobs :
           run: ./test 10 10
         - name: IF 1
           run: |
-          if[ "$(./test 10 15)" == "25" ]
+          if[ "$(./test 10 15)" -eq 25 ]
           then
               exit 0
           else
@@ -27,7 +27,7 @@ jobs :
           fi
         - name: IF 2
           run: |
-          if[ "$(./test 1 2)" == "3" ]
+          if[ "$(./test 1 2)" -eq 3 ]
           then
               exit 0
           else
@@ -35,7 +35,7 @@ jobs :
           fi
         - name: IF 3
           run: |
-          if[ "$(./test 3 4)" != "7" ]
+          if[ "$(./test 3 4)" -ne 7 ]
           then
               exit -1
           else
