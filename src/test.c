@@ -3,7 +3,7 @@
 
 int main( int argc, char *argv[] )
 {
-    int a,b;
+    int a , b;
 
     if(argc != 3)
     {
@@ -15,7 +15,7 @@ int main( int argc, char *argv[] )
     a = atoi(argv[1]);
 	b = atoi(argv[2]);
 
-    printf("Suma lui %d si %d este %d" , a , b , a+b);
+    printf("%d" , a+b);
 
     return 0;
 }
