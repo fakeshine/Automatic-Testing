@@ -4,6 +4,9 @@
 int main( int argc, char *argv[] )
 {
     int a,b;
+
+    printf("nr argumente = %d" , argc);
+
     if(argc != 2)
     {
             printf("numarul de argumente nu este corect");
