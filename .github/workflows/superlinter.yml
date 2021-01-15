@@ -6,3 +6,38 @@ jobs :
       steps:
         - name: Checkout code
           uses: actions/checkout@v2
+        - name: Nume
+          run:
+            echo "Mihnea Apostolescu"
+        - name: Compilare
+          run: gcc test.c -o test
+        - name: Test 1
+          run: ./test 3 12
+        - name: Test 2
+          run: ./test 7 11
+        - name: Test 3
+          run: ./test 10 10
+        - name: IF 1
+          run: |
+          if[ "$(./test 10 15)" == "25" ]
+          then
+              exit 0
+          else
+              exit -1
+          fi
+        - name: IF 2
+          run: |
+          if[ "$(./test 1 2)" == "3" ]
+          then
+              exit 0
+          else
+              exit -1
+          fi
+        - name: IF 3
+          run: |
+          if[ "$(./test 3 4)" != "7" ]
+          then
+              exit -1
+          else
+              exit 0
+          fi
