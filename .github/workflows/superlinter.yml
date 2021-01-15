@@ -10,7 +10,7 @@ jobs :
           run:
             echo "Mihnea Apostolescu"
         - name: Compilare
-          run: gcc test.c -o test
+          run: gcc src/test.c -o test
         - name: Test 1
           run: ./test 3 12
         - name: Test 2
