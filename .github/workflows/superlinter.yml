@@ -36,3 +36,11 @@ jobs :
             then
                 exit 0
             fi
+          - name: IF 4
+          run: |
+            if [ "$(./test 5 5)" -eq "7" ] 
+            then
+                exit 0
+            else
+                exit -1
+            fi
